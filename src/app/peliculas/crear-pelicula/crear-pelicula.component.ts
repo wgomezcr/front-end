@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PeliculaCreacionDTO } from '../pelicula';
 
 @Component({
   selector: 'app-crear-pelicula',
   templateUrl: './crear-pelicula.component.html',
-  styleUrls: ['./crear-pelicula.component.css']
+  styleUrls: ['./crear-pelicula.component.css'],
 })
 export class CrearPeliculaComponent implements OnInit {
+  constructor(private formBuilder: FormBuilder) {}
 
-  constructor() { }
+  form: FormGroup;
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  guardarCambios(pelicula: PeliculaCreacionDTO) {
+    console.log(pelicula);
   }
-
 }

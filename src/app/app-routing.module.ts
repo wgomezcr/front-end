@@ -5,7 +5,7 @@ import { EditarActorComponent } from './actores/editar-actor/editar-actor.compon
 import { IndiceActoresComponent } from './actores/indice-actores/indice-actores.component';
 import { CrearCineComponent } from './cine/crear-cine/crear-cine.component';
 import { IndiceCinesComponent } from './cine/indice-cines/indice-cines.component';
-import { EditarCineComponent } from './cines/editar-cine/editar-cine.component';
+import { EditarCineComponent } from './cine/editar-cine/editar-cine.component';
 import { CrearGeneroComponent } from './generos/crear-genero/crear-genero.component';
 import { EditarGeneroComponent } from './generos/editar-genero/editar-genero.component';
 import { IndiceGenerosComponent } from './generos/indice-generos/indice-generos.component';

@@ -21,6 +21,18 @@ import { MatNativeDateModule } from '@angular/material/core';
 
 import { MatTabsModule } from '@angular/material/tabs';
 
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
+
+import { MatTableModule } from "@angular/material/table";
+
+import { DragDropModule } from "@angular/cdk/drag-drop";
+
+import { MatPaginatorModule } from "@angular/material/paginator";
+
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
+
+import { MAT_DATE_LOCALE } from '@angular/material/core';
+
 
 
 @NgModule({
@@ -35,10 +47,18 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatCheckboxModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatTabsModule
+    MatTabsModule,
+    MatAutocompleteModule,
+    MatTableModule,
+    DragDropModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule
   ],
   imports: [
     CommonModule
+  ],
+  providers: [
+    { provide: MAT_DATE_LOCALE, useValue: 'en-GB' }
   ]
 })
 export class MaterialModule { }
