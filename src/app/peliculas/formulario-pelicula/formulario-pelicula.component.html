@@ -1,3 +1,4 @@
+<app-mostar-errores [errores]="errores"></app-mostar-errores>
 <form (submit)="guardarCambios()" [formGroup]="form">
   <mat-form-field appearance="outline">
     <mat-label>Titulo*</mat-label>
@@ -50,7 +51,9 @@
 
   <h4>Seleccione los autores</h4>
 
-  <app-autocomplete-actores></app-autocomplete-actores>
+  <app-autocomplete-actores
+  [actoresSeleccionados]="actoresSeleccionados"
+  ></app-autocomplete-actores>
 
   <div>
     <button mat-flat-button color="primary" [disabled]="form.invalid">
