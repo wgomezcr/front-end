@@ -37,7 +37,8 @@ import { MapaComponent } from './utilidades/mapa/mapa.component';
 import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/formulario-pelicula.component';
 import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
 import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component';
-import { MostarErroresComponent } from './utilidades/mostar-errores/mostar-errores.component'
+import { MostarErroresComponent } from './utilidades/mostar-errores/mostar-errores.component';
+import { DetallePeliculaComponent } from './peliculas/detalle-pelicula/detalle-pelicula.component'
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { MostarErroresComponent } from './utilidades/mostar-errores/mostar-error
     FormularioPeliculaComponent,
     SelectorMultipleComponent,
     AutocompleteActoresComponent,
-    MostarErroresComponent
+    MostarErroresComponent,
+    DetallePeliculaComponent
   ],
   imports: [
     BrowserModule,
