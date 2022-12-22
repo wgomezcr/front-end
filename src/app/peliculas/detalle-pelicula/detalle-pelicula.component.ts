@@ -21,7 +21,7 @@ export class DetallePeliculaComponent implements OnInit {
     fechaLanzamiento: Date;
     //SafeResourceUrl es un mecanismo de seguridad de angular para manejo de URLs
     trailerURL: SafeResourceUrl;
-    coordenadas: CoordenadaConMensaje[];
+    coordenadas: CoordenadaConMensaje[]=[];
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params =>{

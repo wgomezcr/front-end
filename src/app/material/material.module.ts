@@ -33,6 +33,8 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 
+import { MatChipsModule } from "@angular/material/chips";
+
 
 
 @NgModule({
@@ -52,7 +54,8 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
     MatTableModule,
     DragDropModule,
     MatPaginatorModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatChipsModule
   ],
   imports: [
     CommonModule

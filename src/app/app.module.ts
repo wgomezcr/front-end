@@ -38,7 +38,9 @@ import { FormularioPeliculaComponent } from './peliculas/formulario-pelicula/for
 import { SelectorMultipleComponent } from './utilidades/selector-multiple/selector-multiple.component';
 import { AutocompleteActoresComponent } from './actores/autocomplete-actores/autocomplete-actores.component';
 import { MostarErroresComponent } from './utilidades/mostar-errores/mostar-errores.component';
-import { DetallePeliculaComponent } from './peliculas/detalle-pelicula/detalle-pelicula.component'
+import { DetallePeliculaComponent } from './peliculas/detalle-pelicula/detalle-pelicula.component';
+import { AutorizadoComponent } from './seguridad/autorizado/autorizado.component';
+import { LoginComponent } from './seguridad/login/login.component'
 
 @NgModule({
   declarations: [
@@ -70,7 +72,9 @@ import { DetallePeliculaComponent } from './peliculas/detalle-pelicula/detalle-p
     SelectorMultipleComponent,
     AutocompleteActoresComponent,
     MostarErroresComponent,
-    DetallePeliculaComponent
+    DetallePeliculaComponent,
+    AutorizadoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
