@@ -28,10 +28,25 @@
         <div>
             <a mat-button routerLink="peliculas/crear">Crear Película</a>
         </div>
+        <div>
+            <a mat-button routerLink="usuarios">Usuarios</a>
+        </div>
     </ng-container>
 </app-autorizado>
 
 
+<div class="espacio"></div>
 
+<app-autorizado>
+    <ng-container autorizado>
+        <!-- email viene de cuentasController al construir al construirToke hay un claim llamado email -->
+        <span>Hola, {{seguridadService.obtenerCampoJWT('email')}} </span>
+        <a mat-button (click)="seguridadService.logout()">Logout</a>
+    </ng-container>
+    <ng-container noAutorizado>
+        <a mat-button routerLink="login">Login</a>
+        <a mat-button routerLink="registro">Registro</a>
+    </ng-container>
+</app-autorizado>
 
 </mat-toolbar>

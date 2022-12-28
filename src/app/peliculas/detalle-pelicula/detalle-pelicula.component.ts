@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { RatingService } from 'src/app/rating/rating.service';
 import { Coordenada, CoordenadaConMensaje } from 'src/app/utilidades/mapa/coordenada';
+import Swal from 'sweetalert2';
 import { PeliculaDTO } from '../pelicula';
 import { PeliculasService } from '../peliculas.service';
 
@@ -13,7 +15,8 @@ import { PeliculasService } from '../peliculas.service';
 export class DetallePeliculaComponent implements OnInit {
 
   constructor(private peliculasService: PeliculasService,
-    private activatedRoute: ActivatedRoute, private sanitizer:DomSanitizer) { }
+    private activatedRoute: ActivatedRoute, private sanitizer:DomSanitizer,
+    private ratingService: RatingService) { }
     //ActivatedRoute se utiliza para obtener el id de la pelicula
     //DomSanitizer sirve para verificar la URL
 
@@ -26,7 +29,7 @@ export class DetallePeliculaComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params =>{
       this.peliculasService.obtenerPorId(params.id).subscribe(pelicula => {
-        console.log(pelicula);
+        //console.log(pelicula);
         this.pelicula=pelicula;
         this.fechaLanzamiento = new Date(this.pelicula.fechaLanzamiento);
         this.trailerURL = this.generarURLYoutubeEmbed(this.pelicula.trailer);
@@ -37,6 +40,13 @@ export class DetallePeliculaComponent implements OnInit {
     })
   }
 
+  rated(puntuacion: number){
+    this.ratingService.rate(this.pelicula.id, puntuacion)
+    .subscribe(() => {
+      Swal.fire("Exitoso","Su voto ha sido recibido",'success');
+    })
+  }
+  
   generarURLYoutubeEmbed(url:any): SafeResourceUrl{
     if (!url) {
       return '';
